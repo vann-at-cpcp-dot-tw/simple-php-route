@@ -6,7 +6,7 @@ $json = json_decode(file_get_contents('php://input'));
 $action = $_REQUEST['action'] ?? $json->action ?? null;
 $res =  null;
 
-switch ($_SERVER['REQUEST_URI']) {
+switch (strtok($_SERVER["REQUEST_URI"], '?')) {
   case '' :
   case '/' :
     require __DIR__ . '/global.php';
