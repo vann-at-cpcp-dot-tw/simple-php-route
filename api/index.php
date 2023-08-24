@@ -9,11 +9,11 @@ $res =  null;
 switch ($_SERVER['REQUEST_URI']) {
   case '' :
   case '/' :
-    require __DIR__ . './global.php';
+    require __DIR__ . '/global.php';
   break;
 
-  case '/reg-form' :
-      require __DIR__ . './reg-form.php';
+  case '/user' :
+      require __DIR__ . '/user.php';
   break;
 }
 
